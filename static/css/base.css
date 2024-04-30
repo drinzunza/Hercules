@@ -1,0 +1,32 @@
+body {
+  background-color: #eceef2;
+  margin: 0;
+}
+
+header {
+  background-color: #575656;
+  color: white;
+}
+
+header h3 {
+  margin: 0;
+}
+
+.navbar {
+  background-color: cadetblue;
+}
+
+main {
+  min-height: calc(100vh - 128px);
+}
+
+footer {
+  background-color: #7489a5;
+  color: rgb(229, 226, 226);
+  padding: 12px 0 5px 0;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 3px;
+}
