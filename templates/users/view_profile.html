@@ -1,30 +1,32 @@
-{% extends 'base.html' %} {% block content %}
-<div class="view_profile">
-  <h1>User Profile</h1>
-  {% if user.profile_picture %}
-  <img src="{{user.profile_picture.url}}" alt="Profile picture" />
-  {% else %}
-  <img src="https://corvette_stingray_2020" alt="Profile picture" />
-  {% endif %}
-</div>
-<div class="row justify-content-center"
+{% extends 'base.html' %} {% block content %} {% load static %}
+<link rel="stylesheet" href="{% static '/css/profile.css' %}" />
 
- <div class="col col-auto col-info">
-    <label>Current status: {{user.status}}</label>
-    <label>First name: {{user.first_name}}</label>
-    <label>Last name:{{user.last_name}}</label>
-    <label>Email: {{user.email}}</label>
-    <label>Phone: {{user.phone_number}}</label>
-    <label>Location: {{user.location}}</label>
- </div>
+<div class="view_profile">
+  <h1>@{{user.username}}</h1>
+
+  <div class="row justify-content-center">
+    <div class="col col-auto">
+      {% if user.profile_picture %}
+      <img src="{{user.profile_picture.url}}" alt="Profile picture" />
+      {% else %}
+      <img src="https://tinyurl.com/adbakzw9" alt="Profile picture" />
+      {% endif %}
+    </div>
+    <div class="col col-auto col-info">
+      <label>Current status: {{user.status}}</label>
+      <label>First name: {{user.first_name}}</label>
+      <label>Last name:{{user.last_name}}</label>
+      <label>Email: {{user.email}}</label>
+      <label>Phone: {{user.phone_number}}</label>
+      <label>Location: {{user.location}}</label>
+    </div>
+  </div>
 </div>
-    <div class="row">
-        <div class="col">
-            <label class="l-bio bold"></label>Bio</label>
-        </div>
+<div class="row">
+    <div class="col">
+        <label class="l-bio bold">Bio:</label>
+        <p class="p-bio">{{user.bio}}</p>
     </div>
-        <h5>hello</h5>
-    </div>
-  <h5>{{ user.username }}</h5>
+</div>
 </div>
 {% endblock %}
