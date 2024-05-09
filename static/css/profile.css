@@ -1,0 +1,37 @@
+.view_profile {
+  padding-top: 20px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.view_profile .bold {
+  margin-top: 12px;
+}
+
+.view_profile h1 {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.view_profile .col label {
+  display: block;
+}
+
+.view_profile img {
+  width: 200px;
+}
+
+.view_profile .col-info {
+  padding-top: 5px;
+}
+
+.view_profile .col-info label {
+  margin-bottom: 10px;
+}
+
+.view_profile .l-bio {
+  font-weight: bold;
+}
+
+.view_profile .p-bio {}

@@ -1,15 +1,8 @@
 <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <a class="navbar-brand" href="#">SDGKU Social</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -21,6 +14,15 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{% url 'about' %}">About</a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'feed' %}">Feed</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'create_post' %}">Create post</a>
+        </li>
+
       </ul>
       <div class="d-flex">
         <a class="btn btn-outline-success" href="{% url 'login' %}">Login</a>

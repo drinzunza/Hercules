@@ -30,3 +30,71 @@ footer {
 footer p {
   margin-bottom: 3px;
 }
+
+/***********************************
+       LOGIN  
+************************************/
+
+.login {
+  padding-top: 50px;
+}
+
+@media (max-width: 767px) {
+    .login {
+      padding-top: 150px;
+    }
+
+    .login h1 {
+      color: darkcyan;
+    }
+}
+
+.login h1 {
+  text-align: center;
+}
+
+.login form {
+  max-width: 400px;
+  background-color: white;
+  border: 1px solid #9b9999;
+  border-radius: 4px;
+  padding: 20px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login hr {
+  margin: 20px 0;
+}
+
+/***********************************
+       SIGN UP  
+************************************/
+
+.signup {
+  padding: 20px 0;
+}
+
+.signup h1 {
+  text-align: center;
+}
+
+.signup form {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: #ffffff;
+  border: 1px solid #dddfe3;
+  border-radius: 4px;
+  padding: 10px 15px;
+}
+
+@media (max-width: 767px) {
+  .signup form {
+    width: 106%;
+    margin-left: -13px;
+  }
+}
+

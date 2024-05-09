@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static '/css/feed.css' %}">
+
+<div class="feed">
+    {% for post in posts %}
+    <div class="post">
+        <div class="post-header">
+            <div>
+                <h2>{{ post.author.username }}</h2>
+                <span class="post-date">{{ post.create_at|date:"d/M H:i" }}</span>
+            </div>
+        </div>
+        <div class="post-content">
+            {{ post.content }}
+            {% if post.image %}
+            <img src="{{ post.image.url }}" alt="Post image">
+            {% endif %}
+        </div>
+        <div class="post-reactions">
+            <span class="like">Likes: {{ post.reactions.count }}</span>
+            <span class="dislike">Dislikes: {{ post.reactions.count }}</span>
+            <span class="heart">Hearts: {{ post.reactions.count }}</span>
+        </div>
+    </div>
+    {% empty %}
+    <p>No posts to show.</p>
+    {% endfor %}
+</div>
+{% endblock %}
