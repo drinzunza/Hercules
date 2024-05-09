@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %} 
+
+{% block content %}
+
+<Link rel="stylesheet" href="{% static '/css/view_profile.css' %}">
+
+<div class="view_profile">
+
+    <div class="profile_image">
+        {% if user.profile_picture %}
+        <img src="{{user.profile_picture.url}}" alt="Profile picture" />
+        {% else %}
+        <img src="https://tinyurl.com/adbakzw9" alt="Profile picture" />
+        {% endif %}
+    </div>
+    
+    <div class="profile_info">
+        <h1>{{ user.username }}</h1>
+        <h3>Email: {{ user.email }}</h3>
+        <h3>Phone Number: {{ user.phonenu}}</h3>
+        <p class="bio">Bio: {{ user.profile.bio }}</p>
+
+    </div>
+</div>
+{% endblock %}
