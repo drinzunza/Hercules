@@ -1,0 +1,56 @@
+/* Ensure you include the Bootstrap CSS file in your template before this custom CSS */
+
+.feed {
+    max-width: 800px;
+    margin: auto;
+}
+
+.post {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.post-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.post-date {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.post-content {
+    margin-bottom: 1rem;
+}
+
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 1rem;
+}
+
+.post-reactions {
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+}
+
+.post-reactions span {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+/* Add additional styles as needed */

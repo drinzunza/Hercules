@@ -1,0 +1,95 @@
+body {
+    background-color: rgb(214, 227, 225);
+    margin: 0%;
+}
+
+header {
+    background-color: blue;
+}
+
+header h3 {
+    margin: 0;
+}
+
+.navbar {
+    background-color: dodgerblue;
+}
+
+main {
+    min-height: calc(100vh - 80px);
+}
+
+footer {
+    background-color: #7489a5;
+    color: rgb(229, 226, 226);
+    padding: 12px 0 5px 0;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 3px;
+}
+
+/***********************************
+       LOGIN  
+************************************/
+
+.login {
+    padding-top: 50 px;
+
+}
+
+@media (min-width: 767px) {
+    .login {
+        padding-top: 100px;
+    }
+
+    .login h1 {
+        color: darkcyan;
+    }
+}
+
+.login h1 {
+    text-align: center;
+}
+
+.login form {
+    max-width: 400px;
+    background-color: white;
+    border: 1px solid #9b9999;
+    border-radius: 4px;
+    padding: 10px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/***********************************
+       SIGN UP  
+************************************/
+
+.signup {
+    padding: 20px 0px;
+}
+
+.signup h1 {
+    text-align: center;
+}
+
+.signup form {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: f7f6f6;
+    border: 1px solid #dddfe3;
+    border-radius: 4px;
+    padding: 10px 15px;
+}
+
+@media (max-width: 767px) {
+    .signup form {
+        width: 106%;
+        margin-left: -13px;
+    }
+}

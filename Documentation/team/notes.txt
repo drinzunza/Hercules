@@ -1,1 +1,43 @@
-Test
+to create a new branch
+
+
+create a virtual environment
+python3 -m venv venv
+source venv/bin/activate
+python3 -m pip install django
+create a new project with django
+django-admin startproject config .
+python3 manage.py runserver to run server
+Last login: Wed Apr 24 18:58:47 on console
+➜  ~ cd code/sdgku
+➜  sdgku cd project hercules/hercules
+cd: string not in pwd: project
+➜  sdgku /Users/tyrellpatton/COde/SDGKU/project\ hercules/Hercules 
+➜  Hercules git:(tyrell/init) ✗ source venv/bin/venv
+source: no such file or directory: venv/bin/venv
+➜  Hercules git:(tyrell/init) ✗ source venv/bin/activate
+(venv) ➜  Hercules git:(tyrell/init) ✗ pip3 install django
+
+
+[notice] A new release of pip is available: 23.2.1 -> 24.0
+[notice] To update, run: pip install --upgrade pip
+(venv) ➜  Hercules git:(tyrell/init) ✗ code .                   
+(venv) ➜  Hercules git:(tyrell/init) ✗ python3 manage.py runserver
+
+(venv) ➜  Hercules git:(tyrell/init) ✗ python3 manage.py makemigrations
+
+(venv) ➜  Hercules git:(tyrell/init) ✗ python3 manage.py migrate
+
+
+1 .- create a view_profile function on users > views
+(similar to about on posts > views )
+
+2 .- create a  templates/users/view_profile.html template 
+import the base layout
+and add a h1
+
+3 .- create the url on users > urls
+(similar to about url on  posts > urls )
+
+- import the function from the views file
+- create a path for it
