@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: {{user.color}};" >
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Hercules</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -28,22 +28,53 @@
           >
         </li>
         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'login' %}"
+            >login</a
+          >
+        </li>
+        <li class="nav-item"> 
+          <a class="nav-link active" aria-current="page" href="{% url 'create_post' %}"
+            >Create Post</a
+            >
+        </li>
+        <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{% url 'feed' %}"
             >Feed</a
           >
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link active"
-            aria-current="page"
-            href="{% url 'create_post' %}"
-            >Create Post</a
+          <a class="nav-link active" aria-current="page" href="{% url 'signup' %}"
+            >Sign Up</a
           >
         </li>
       </ul>
-      <div class="d-flex">
-        <a class="btn btn-outline-success" href="{% url 'login' %}">login</a>
+    </div>
+    <div>
+      {% if not user.is_authenticated %}
+        <a class="btn btn-outline-success" href="{% url 'login' %}">Login</a>
+        {% else %}
+        <div class="u-avatar">
+          {% if user.profile_picture %}
+          <img src="{{user.profile_picture.url}}" alt="User avatar">
+          {% else %}
+          <img src="https://tinyurl.com/adbakzw9" alt="Profile picture" />
+          {% endif %}
+        </div>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {{user.username}}
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{% url 'edit_profile' %}">Edit Profile</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+          </ul>
+        </div>
+
+        {% endif %}
+        </div>
       </div>
     </div>
-  </div>
 </nav>

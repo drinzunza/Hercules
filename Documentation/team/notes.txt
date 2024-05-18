@@ -1,9 +1,7 @@
-to create a new branch
-
 
 create a virtual environment
 python3 -m venv venv
-source venv/bin/activate
+source venv/bin/venv activate
 python3 -m pip install django
 create a new project with django
 django-admin startproject config .
@@ -17,17 +15,10 @@ cd: string not in pwd: project
 source: no such file or directory: venv/bin/venv
 ➜  Hercules git:(tyrell/init) ✗ source venv/bin/activate
 (venv) ➜  Hercules git:(tyrell/init) ✗ pip3 install django
-
-
-[notice] A new release of pip is available: 23.2.1 -> 24.0
-[notice] To update, run: pip install --upgrade pip
 (venv) ➜  Hercules git:(tyrell/init) ✗ code .                   
 (venv) ➜  Hercules git:(tyrell/init) ✗ python3 manage.py runserver
-
 (venv) ➜  Hercules git:(tyrell/init) ✗ python3 manage.py makemigrations
-
 (venv) ➜  Hercules git:(tyrell/init) ✗ python3 manage.py migrate
-
 
 1 .- create a view_profile function on users > views
 (similar to about on posts > views )

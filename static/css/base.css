@@ -93,3 +93,13 @@ footer p {
         margin-left: -13px;
     }
 }
+
+.navbar .u-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.navbar .dropdown-menu[data-bs-popper] {
+    left: -100px !important;
+}

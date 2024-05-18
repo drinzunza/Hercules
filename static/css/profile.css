@@ -34,4 +34,19 @@
     font-weight: bold;
   }
   
-  .view_profile .p-bio {}
+  .view_profile .p-bio {
+
+  }
+
+  .edit_profile {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #8ac0b7;
+    padding: 10px 15px;
+    background-color: white
+  }
+
+  .edit_profile h1 {
+    text-align: center;
+  }

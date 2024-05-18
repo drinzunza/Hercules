@@ -17,13 +17,33 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #dee2e6;
+    position:relative;
+}
+
+.post-header a {
+    color: #c7d4d7;
 }
 
 .post-header h2 {
     margin: 0;
     font-size: 1.5rem;
     color: #333;
+}
+
+.post-header .u-avatar {
+    margin-right: 7px;
+}
+
+.post-header .u-name {
+    flex: auto;
+    padding-top: 2px;
+}
+
+.post-header .u-avatar img {
+    width: 60px;
+    border-radius: 50% 70%;
 }
 
 .post-date {
@@ -54,3 +74,16 @@
 }
 
 /* Add additional styles as needed */
+
+/*  status popup */
+.post-header .popup {
+    visibility: hidden;
+    width: 200px;
+    border: 1px solid #3333;
+    border-radius: 5px;
+    padding: 20px 12px;
+    background: #dcecec;
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+}
