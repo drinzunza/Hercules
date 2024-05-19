@@ -1,7 +1,7 @@
 
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: {{user.color}};">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">SDGKU Social</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -25,8 +25,33 @@
         </ul>
 
         <div class="d-flex">
+            {% if not user.is_authenticated %}
             <a class="btn btn-outline-success" href="{% url 'login' %}">Login</a>
-        </div>
+            {% else %}
+            <div class="u-avatar">
+                {% if post.author.profile_picture %}
+                <img src="{{post.author.profile.url}}" alt="User avatar">
+                {% else %}
+                <img src="https://tinyurl.com/adbakzw9" alt="Profile Picture">
+                {% endif %}
+            </div>
+            <label>{{user.username}}</label>
+
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{user.username}}
+                </a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'edit_profile' %}">Edit Profile</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                </ul>
+            </div>
+
+            {% endif %}
+            </div>
         </div>
     </div>
     </nav>

@@ -16,12 +16,33 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
+    border-bottom: 1 px solid #dee2e6;
+    position: relative;
   }
-  
+  .post-header a {
+    color: rgb(178, 226, 188);
+  }
+
   .post-header h2 {
     margin: 0;
     font-size: 1.5rem;
     color: #333;
+  }
+
+  .post-header .u-avatar{
+    margin-right: 7px;
+  }
+
+  .post-header .u-name{
+    flex: auto;
+    padding-top: 2px;
+  }
+
+  .post-header .u-avatar img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50% 70%;
+    margin-bottom: 3px;
   }
   
   .post-date {
@@ -51,3 +72,18 @@
     color: #6c757d;
   }
   
+
+  /* status popup */
+
+.post-header .popup {
+  visibility: hidden;
+  width: 200px;
+  border: 1px solid #3333;
+  border-radius: 5px;
+  padding: 20px 12px;
+  background: #dcecec;
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+}
+  /*  */

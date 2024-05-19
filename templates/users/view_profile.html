@@ -17,10 +17,16 @@
     
     <div class="profile_info">
         <h1>{{ user.username }}</h1>
-        <h3>Email: {{ user.email }}</h3>
-        <h3>Phone Number: {{ user.phonenu}}</h3>
-        <p class="bio">Bio: {{ user.profile.bio }}</p>
-
+        <label>Email: {{ user.email }}</label>
+        <label>First Name: {{ user.first_name }}</label>
+        <label>Last Name: {{ user.last_name }}</label> 
+        <label>Birth Date: {{ user.birth_date }}</label>
+        <label>Location: {{ user.location }}</label>
     </div>
+
+    <div class="bio">
+        <p>Bio: {{ user.profile.bio }}</p>
+    </div>
+
 </div>
 {% endblock %}
