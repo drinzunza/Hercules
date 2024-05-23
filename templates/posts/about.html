@@ -1,6 +1,18 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<h3>Page created by:</h3>
-<h1>Gerardo Linarez</h1>
+
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+
+<h1>Welcome</h1>
+<div>
+    <h3>Page created by: hello</h3>
+    <h1>Gerardo Linarez</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, perspiciatis vitae. Expedita modi, natus ut in aperiam debitis. Voluptate itaque, sapiente nam ea nemo rerum officia molestias quibusdam aperiam vero.</p>
+</div>
+
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3357.165409720214!2d-117.15753302469035!3d32.70823208749866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9535c89afe2e7%3A0xb1759c2aecbcc473!2sSan%20Diego%20Global%20Knowledge%20University!5e0!3m2!1sen!2sus!4v1716424428121!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
 {% endblock %}

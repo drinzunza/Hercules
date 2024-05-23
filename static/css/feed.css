@@ -72,6 +72,40 @@
     color: #6c757d;
   }
   
+  .post-reactions {
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+  }
+  
+  .post-reactions span {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-right: 5px;
+    text-decoration: none;
+  }
+  
+  .post-reactions button {
+    border: 1px solid #dce4eb;
+  }
+  
+  .btn-link {
+    text-decoration: none !important;
+  }
+  
+  .post-reactions button:hover {
+    border: 1px solid #a9b3bb;
+    background-color: #dce4eb;
+  }
+  
+  .post-reactions button:hover span {
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .post-reactions button:hover i {
+    font-size: 18px;
+  }
 
   /* status popup */
 

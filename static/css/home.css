@@ -1,0 +1,12 @@
+.home {
+    max-width: 800px;
+    margin: auto;
+}
+
+.home h1{
+    text-align: center;
+}
+
+.home img{
+    width: 200px;
+}

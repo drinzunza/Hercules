@@ -1,5 +1,17 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<h1>It worked!</h1>
+
+<link rel="stylesheet" href="{% static '/css/home.css' %}">
+
+<div class="home">
+
+    <div class="u-avatar">
+        <img src="https://png.pngtree.com/png-clipart/20230914/original/pngtree-program-clipart-boy-working-with-computer-cartoon-vector-png-image_11091647.png" alt="Profile picture" />
+    </div>
+    <h1>Lets Get Social!</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae neque, similique sapiente ipsam molestias quaerat amet tempora cum inventore repellendus. Beatae assumenda veritatis possimus, nesciunt repellendus qui nam aliquam aperiam?</p>
+</div>
+
 {% endblock %}
