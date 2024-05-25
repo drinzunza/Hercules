@@ -29,8 +29,8 @@
             <a class="btn btn-outline-success" href="{% url 'login' %}">Login</a>
             {% else %}
             <div class="u-avatar">
-                {% if post.author.profile_picture %}
-                <img src="{{post.author.profile.url}}" alt="User avatar">
+                {% if user.profile_picture %}
+                <img src="{{user.profile_picture.url}}" alt="User avatar">
                 {% else %}
                 <img src="https://tinyurl.com/adbakzw9" alt="Profile Picture">
                 {% endif %}
