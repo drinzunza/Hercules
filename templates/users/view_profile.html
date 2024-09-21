@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static '/css/profile.css' %}">
+
+<div class="view_profile">    
+
+    <div class="parent">
+        <div class="col-img">
+            <h1>@{{profile.username}}</h1>
+            {% if profile.profile_picture %}
+            <img src="{{profile.profile_picture.url}}" alt="Profile picture" />
+            {% else %}
+            <img src="https://tinyurl.com/adbakzw9" alt="Profile picture" />
+            {% endif %}
+        </div>
+        <div class="col-data">
+            <label>Current status: {{profile.status}}</label>
+            <label>First name: {{profile.first_name}}</label>
+            <label>Last name:{{profile.last_name}}</label>
+            <label>Email: {{profile.email}}</label>
+            <label>Phone: {{profile.phone_number}}</label>
+            <label>Location: {{profile.location}}</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <label class="l-bio bold">Bio:</label>
+            <p class="p-bio">{{profile.bio}}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
