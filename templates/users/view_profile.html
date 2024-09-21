@@ -3,32 +3,31 @@
 {% load static %}
 <link rel="stylesheet" href="{% static '/css/profile.css' %}">
 
-<div class="view_profile">
-    <h1>@{{user.username}}</h1>
+<div class="view_profile">    
 
-
-    <div class="row justify-content-center">
-        <div class="col col-auto">
-            {% if user.profile_picture %}
-            <img src="{{user.profile_picture.url}}" alt="Profile picture" />
+    <div class="parent">
+        <div class="col-img">
+            <h1>@{{profile.username}}</h1>
+            {% if profile.profile_picture %}
+            <img src="{{profile.profile_picture.url}}" alt="Profile picture" />
             {% else %}
             <img src="https://tinyurl.com/adbakzw9" alt="Profile picture" />
             {% endif %}
         </div>
-        <div class="col col-auto col-info">
-            <label>Current status: {{user.status}}</label>
-            <label>First name: {{user.first_name}}</label>
-            <label>Last name:{{user.last_name}}</label>
-            <label>Email: {{user.email}}</label>
-            <label>Phone: {{user.phone_number}}</label>
-            <label>Location: {{user.location}}</label>
+        <div class="col-data">
+            <label>Current status: {{profile.status}}</label>
+            <label>First name: {{profile.first_name}}</label>
+            <label>Last name:{{profile.last_name}}</label>
+            <label>Email: {{profile.email}}</label>
+            <label>Phone: {{profile.phone_number}}</label>
+            <label>Location: {{profile.location}}</label>
         </div>
     </div>
 
     <div class="row">
         <div class="col">
             <label class="l-bio bold">Bio:</label>
-            <p class="p-bio">{{user.bio}}</p>
+            <p class="p-bio">{{profile.bio}}</p>
         </div>
     </div>
 </div>

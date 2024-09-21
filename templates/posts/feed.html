@@ -4,14 +4,30 @@
 {% block content %}
 
 <link rel="stylesheet" href="{% static '/css/feed.css' %}">
+<script src="{% static '/js/feed.js' %}"></script>
 
 <div class="feed">
+    {% csrf_token %}
+
     {% for post in posts %}
-    <div class="post">
+    <div id="{{post.id}}" class="post">
         <div class="post-header">
-            <div>
-                <h2>{{ post.author.username }}</h2>
-                <span class="post-date">{{ post.create_at|date:"d/M H:i" }}</span>
+            <div class="u-avatar">
+                {% if post.author.profile_picture %}
+                <img src="{{post.author.profile_picture.url}}" alt="User avatar">
+                {% else %}
+                <img src="https://tinyurl.com/adbakzw9" alt="Profile picture" />
+                {% endif %}
+            </div>
+            <div class="popup">
+                <label>User's status</label>
+                <label class="status">{{post.author.status}}</label>
+            </div>
+            <div class="u-name">
+                <a href="{% url 'view_profile' user_id=post.author.id %}">
+                    <h2>{{ post.author.username }}</h2>
+                </a>
+                <span class="post-date">{{ post.create_at | date:"d/M H:i" }}</span>
             </div>
         </div>
         <div class="post-content">
@@ -21,9 +37,20 @@
             {% endif %}
         </div>
         <div class="post-reactions">
-            <span class="like">Likes: {{ post.reactions.count }}</span>
-            <span class="dislike">Dislikes: {{ post.reactions.count }}</span>
-            <span class="heart">Hearts: {{ post.reactions.count }}</span>
+            <button class="btn btn-link like">
+                <span class="like-count">{{ post.like_count }}</span>
+                <i class="fa-regular fa-thumbs-up"></i>
+            </button>
+
+            <button class="btn btn-link dislike">
+                <span class="dislike-count">{{ post.dislike_count }}</span>
+                <i class="fa-regular fa-thumbs-down"></i>
+            </button>
+
+            <button class="btn btn-link heart">
+                <span class="heart-count">{{ post.heart_count }}</span>
+                <i class="fa-regular fa-heart"></i>
+            </button>
         </div>
     </div>
     {% empty %}
